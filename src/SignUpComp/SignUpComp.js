@@ -4,25 +4,25 @@ import {FlatList, ScrollView} from 'react-native-gesture-handler';
 
 const data = [
   {
-    name: 'Competition One',
+    name: '20th Asian Game - Achi Nagoya 2026 (Winter)',
     date: '22/02/2025',
     venue: 'Seoul',
   },
   {
-    name: 'Competition Two',
+    name: '20th Asian Game - Achi Nagoya 2026 (Winter)',
     date: '22/02/2025',
     venue: 'Seoul',
   },
   {
-    name: 'Competition Three',
+    name: '20th Asian Game - Achi Nagoya 2026 (Winter)',
     date: '22/02/2025',
     venue: 'Seoul',
   },
   {
-    name: 'Competition Four',
+    name: '20th Asian Game - Achi Nagoya 2026 (Winter)',
     date: '22/02/2025',
     venue: 'Seoul',
-  }
+  },
 ];
 
 const SignUpComp = ({navigation}) => {
@@ -53,13 +53,14 @@ const SignUpComp = ({navigation}) => {
           register.
         </Text>
       </View>
-      <ScrollView>
-      <FlatList
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => index.toString()}
-        contentContainerStyle={styles.container}
-      />
+      <ScrollView showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}>
+        <FlatList
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item, index) => index.toString()}
+          contentContainerStyle={styles.container}
+        />
       </ScrollView>
     </View>
   );
@@ -92,38 +93,43 @@ const styles = StyleSheet.create({
     fontFamily: 'PlusJakartaSans-Bold',
     fontSize: 25,
     color: 'black',
-    marginTop:10
+    marginTop: 10,
   },
-  para:{fontFamily: 'PlusJakartaSans-Regular',
+  para: {
+    fontFamily: 'PlusJakartaSans-Regular',
     fontSize: 16,
     color: 'black',
-    marginTop:10,
-    marginBottom:10
-
+    marginTop: 10,
+    marginBottom: 10,
   },
   card: {
     backgroundColor: '#253BFF',
-    padding: 20,
+    padding: 25,
     marginVertical: 20,
     borderRadius: 15,
+
+    elevation: 5,
   },
   cardText: {
     color: '#fff',
     fontSize: 16,
   },
-  cardTextName:{
+  cardTextName: {
     fontFamily: 'PlusJakartaSans-SemiBold',
     fontSize: 18,
     color: 'white',
+    lineHeight: 30,
   },
-  cardTextDate:{
+  cardTextDate: {
     fontFamily: 'PlusJakartaSans-Regular',
     fontSize: 16,
     color: 'white',
+    lineHeight: 30,
   },
-  cardTextVenue:{
+  cardTextVenue: {
     fontFamily: 'PlusJakartaSans-Regular',
     fontSize: 16,
     color: 'white',
-  }
+    lineHeight: 30,
+  },
 });
